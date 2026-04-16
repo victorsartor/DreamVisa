@@ -1,0 +1,99 @@
+@use 'variables' as *;
+
+// Nav Styling
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    background: transparent;
+
+    &.scrolled {
+        background: rgba(31, 48, 64, 0.9); // Jet Black with transparency
+        padding: 12px 0;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(212, 176, 61, 0.2);
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 700;
+    color: $metallic-gold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+        color: $white;
+    }
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: $white;
+    cursor: pointer;
+    z-index: 2001;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: $jet-black;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 2000;
+        gap: 40px;
+
+        &.active {
+            right: 0;
+        }
+
+        a {
+            font-size: 24px;
+        }
+    }
+
+    a {
+        color: $white;
+        font-weight: 500;
+        font-size: 15px;
+        opacity: 0.8;
+
+        &:hover {
+            color: $metallic-gold;
+            opacity: 1;
+        }
+    }
+}
+
+.header-cta {
+    .btn-nav {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

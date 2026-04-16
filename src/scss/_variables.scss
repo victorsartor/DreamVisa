@@ -1,0 +1,30 @@
+// DV Visa - Design Tokens
+// Paleta de Cores (da referncia do usurio)
+
+// HEX
+$blue-slate: #566167ff;
+$jet-black: #1F3040ff;
+$platinum: #F3F4F7ff;
+$metallic-gold: #D4B03Dff;
+$white: #FEFEFEff;
+
+// HSL Versions (for translucency/glassmorphism)
+$blue-slate-hsl: hsla(201, 9%, 37%, 1);
+$jet-black-hsl: hsla(209, 35%, 19%, 1);
+$platinum-hsl: hsla(225, 20%, 96%, 1);
+$metallic-gold-hsl: hsla(46, 64%, 54%, 1);
+$white-hsl: hsla(0, 0%, 100%, 1);
+
+// Gradients
+$gradient-gold: linear-gradient(135deg, $metallic-gold, #f1d575);
+$gradient-dark: linear-gradient(180deg, $jet-black, #131d27);
+$gradient-premium: linear-gradient(135deg, #1F3040ff, #566167ff);
+
+// Typography
+$font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+$font-secondary: 'Outfit', sans-serif;
+
+// Shadows & Glass
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.1);
+$shadow-gold: 0 10px 30px rgba(212, 176, 61, 0.3);
